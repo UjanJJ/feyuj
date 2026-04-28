@@ -5,9 +5,10 @@ RUN apk add --no-cache \
     unzip \
     bash \
     ca-certificates \
-    openssl
+    openssl \
+    gettext          # ← Вот это главное! Добавили gettext для envsubst
 
-# Скачиваем актуальную версию Xray
+# Скачиваем Xray
 ARG XRAY_VERSION=1.8.23
 RUN curl -L -o /tmp/xray.zip https://github.com/XTLS/Xray-core/releases/download/v${XRAY_VERSION}/Xray-linux-64.zip && \
     unzip /tmp/xray.zip -d /usr/local/bin/ && \
