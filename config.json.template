@@ -25,13 +25,12 @@
           "xver": 0,
           "serverNames": ["${SERVER_NAME}"],
           "privateKey": "${PRIVATE_KEY}",
-          "shortIds": ["${SHORT_ID}", ""],
-          "spiderX": "/"
+          "shortIds": ["${SHORT_ID}", ""]
         }
       },
       "sniffing": {
         "enabled": true,
-        "destOverride": ["http", "tls", "quic"]
+        "destOverride": ["http", "tls"]
       }
     }
   ],
