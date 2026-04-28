@@ -1,7 +1,7 @@
 #!/bin/bash
 
 UUID=${UUID:-$(cat /proc/sys/kernel/random/uuid)}
-SHORT_ID=${SHORT_ID:-$(openssl rand -hex 8)}
+SHORT_ID=${SHORT_ID:-$(openssl rand -hex 4)}   # ← Изменено на 4 (8 символов)
 
 KEYS=$(xray x25519)
 PRIVATE_KEY=$(echo "$KEYS" | grep "Private key" | awk '{print $3}')
