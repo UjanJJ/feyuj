@@ -6,7 +6,7 @@ RUN apk add --no-cache \
     bash \
     ca-certificates \
     openssl \
-    gettext          # ← Вот это главное! Добавили gettext для envsubst
+    gettext
 
 # Скачиваем Xray
 ARG XRAY_VERSION=1.8.23
